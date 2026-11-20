@@ -1,0 +1,1035 @@
+{
+  "format": "synthetix_restaurant_menu",
+  "version": 1,
+  "whatsapp": "587353064",
+  "whatsappMessage": "Que quiere comer? Mierda?",
+  "menu": {
+    "categories": [
+      {
+        "id": "cat_entradas_ensaladas",
+        "name": "Entradas y Ensaladas",
+        "description": "Tequeños, alitas, tenders, chorizos y ensaladas."
+      },
+      {
+        "id": "cat_chiky_lucky",
+        "name": "Chiky Lucky",
+        "description": "Pollo a la plancha o crispy con ensalada césar."
+      },
+      {
+        "id": "cat_hamburguesas",
+        "name": "Hamburguesas",
+        "description": "Clásicas de carne, pollo o chuleta ahumada."
+      },
+      {
+        "id": "cat_hamburguesas_especiales",
+        "name": "Hamburguesas Especiales",
+        "description": "Nuestras combinaciones exclusivas y más grandes."
+      },
+      {
+        "id": "cat_club_house",
+        "name": "Club House",
+        "description": "Platos de carne o pollo con papas o arros de cebolla."
+      },
+      {
+        "id": "cat_extras",
+        "name": "Extras",
+        "description": "Porciones adicionales y salsas."
+      },
+      {
+        "id": "cat_bebidas",
+        "name": "Bebidas",
+        "description": "Cafés, jugos, refrescos y bebidas energéticas."
+      },
+      {
+        "id": "cat_postres",
+        "name": "Postres",
+        "description": "Opciones dulces para terminar."
+      }
+    ],
+    "products": [
+      {
+        "id": "prod_01",
+        "categoryId": "cat_entradas_ensaladas",
+        "name": "Tequeños",
+        "description": "06 Unidades",
+        "price": 5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_02",
+        "categoryId": "cat_entradas_ensaladas",
+        "name": "Alitas de Pollo",
+        "description": "08 Unidades (Fritas | BBQ | BBQ Picante | Miel Mostaza | Crunch)",
+        "price": 7,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_03",
+        "categoryId": "cat_entradas_ensaladas",
+        "name": "Tenders con Papas Fritas",
+        "description": "06 Unidades con Papas Fritas o Aros de Cebolla",
+        "price": 7.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_04",
+        "categoryId": "cat_entradas_ensaladas",
+        "name": "Bandeja Rumbera",
+        "description": "1 rac. de Tequeños, 1 rac. de Alitas, 1 rac. de Tenders con Papas Fritas o Aros de Cebolla",
+        "price": 15,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_05",
+        "categoryId": "cat_entradas_ensaladas",
+        "name": "Chorizos",
+        "description": "02 Unidades troceados con Papas Fritas o Aros de Cebolla",
+        "price": 8,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_06",
+        "categoryId": "cat_entradas_ensaladas",
+        "name": "Ración Papas Fritas",
+        "description": "",
+        "price": 4,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_07",
+        "categoryId": "cat_entradas_ensaladas",
+        "name": "Ración Papas Americanas",
+        "description": "Con Queso Fundido y Tocínea",
+        "price": 6,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_08",
+        "categoryId": "cat_entradas_ensaladas",
+        "name": "Ración Aros de Cebolla",
+        "description": "",
+        "price": 4,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_09",
+        "categoryId": "cat_entradas_ensaladas",
+        "name": "Salchipapas",
+        "description": "Salchichas Cortadas en Moneda con Queso Fundido y Papas Fritas",
+        "price": 6,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_10",
+        "categoryId": "cat_entradas_ensaladas",
+        "name": "Choripapas",
+        "description": "Chorizos Cortados en Moneda con Queso Fundido y Papas Fritas",
+        "price": 7,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_11",
+        "categoryId": "cat_entradas_ensaladas",
+        "name": "Ensalada César",
+        "description": "",
+        "price": 5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_12",
+        "categoryId": "cat_entradas_ensaladas",
+        "name": "Ensalada César con Pollo a la Plancha",
+        "description": "",
+        "price": 7,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_13",
+        "categoryId": "cat_entradas_ensaladas",
+        "name": "Ensalada César con Pollo Crispy",
+        "description": "",
+        "price": 8,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_14",
+        "categoryId": "cat_entradas_ensaladas",
+        "name": "Ensalada César con Chorizo",
+        "description": "",
+        "price": 7,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_15",
+        "categoryId": "cat_chiky_lucky",
+        "name": "Pollo a la Plancha",
+        "description": "Con Ensalada César, Papas Fritas o Aros de Cebolla",
+        "price": 6.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_16",
+        "categoryId": "cat_chiky_lucky",
+        "name": "Pollo Crispy",
+        "description": "Con Ensalada César, Papas Fritas o Aros de Cebolla",
+        "price": 7.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_17",
+        "categoryId": "cat_chiky_lucky",
+        "name": "Pollo a la Plancha (con Salsa Nápoles y Queso)",
+        "description": "Con Salsa Nápoles, Queso Mozzarella, Ensalada César, Papas Fritas o Aros de Cebolla",
+        "price": 8.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_18",
+        "categoryId": "cat_chiky_lucky",
+        "name": "Pollo Crispy (con Salsa Nápoles y Queso)",
+        "description": "Con Salsa Nápoles, Queso Mozzarella, Ensalada César, Papas Fritas o Aros de Cebolla",
+        "price": 9,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_19",
+        "categoryId": "cat_hamburguesas",
+        "name": "Carne o Pollo Sencilla",
+        "description": "A la Plancha, Lechuga, Tomate, Mayonesa, Ketchup, con Papas Fritas o Aros de Cebolla de Contorno",
+        "price": 6.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_20",
+        "categoryId": "cat_hamburguesas",
+        "name": "Carne o Pollo Doble",
+        "description": "A la Plancha, Lechuga, Tomate, Mayonesa, Ketchup, con Papas Fritas o Aros de Cebolla de Contorno",
+        "price": 7.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_21",
+        "categoryId": "cat_hamburguesas",
+        "name": "Carne o Pollo Triple",
+        "description": "A la Plancha, Lechuga, Tomate, Mayonesa, Ketchup, con Papas Fritas o Aros de Cebolla de Contorno",
+        "price": 9,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_22",
+        "categoryId": "cat_hamburguesas",
+        "name": "Pollo Crispy Sencilla",
+        "description": "Lechuga, Tomate, Mayonesa, Ketchup, con Papas Fritas o Aros de Cebolla de Contorno",
+        "price": 7.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_23",
+        "categoryId": "cat_hamburguesas",
+        "name": "Pollo Crispy Doble",
+        "description": "Lechuga, Tomate, Mayonesa, Ketchup, con Papas Fritas o Aros de Cebolla de Contorno",
+        "price": 9.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_24",
+        "categoryId": "cat_hamburguesas",
+        "name": "Pollo Crispy Triple",
+        "description": "Lechuga, Tomate, Mayonesa, Ketchup, con Papas Fritas o Aros de Cebolla de Contorno",
+        "price": 11.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_25",
+        "categoryId": "cat_hamburguesas",
+        "name": "Chuleta Ahumada Sencilla",
+        "description": "Lechuga, Tomate, Mayonesa, Ketchup, con Papas Fritas o Aros de Cebolla de Contorno",
+        "price": 7.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_26",
+        "categoryId": "cat_hamburguesas",
+        "name": "Chuleta Ahumada Doble",
+        "description": "Lechuga, Tomate, Mayonesa, Ketchup, con Papas Fritas o Aros de Cebolla de Contorno",
+        "price": 9.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_27",
+        "categoryId": "cat_hamburguesas",
+        "name": "Chuleta Ahumada Triple",
+        "description": "Lechuga, Tomate, Mayonesa, Ketchup, con Papas Fritas o Aros de Cebolla de Contorno",
+        "price": 11.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_28",
+        "categoryId": "cat_hamburguesas",
+        "name": "La Sana Burguer",
+        "description": "1 Pieza de Carne o Pollo a la Plancha o Pollo Crispy con Tomate, Mayonesa, Ketchup, envuelta en Lechuga con Papas Fritas o Aros de Cebolla de Contorno",
+        "price": 6,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_29",
+        "categoryId": "cat_hamburguesas_especiales",
+        "name": "De Chorizo",
+        "description": "2 Chorizos en Mariposa, Lechuga, Tomate, Mayonesa, Ketchup o Salsa BBQ o Salsa de Cilantro con Papas Fritas o Aros de Cebolla de Contorno",
+        "price": 7,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_30",
+        "categoryId": "cat_hamburguesas_especiales",
+        "name": "Rey Huevo",
+        "description": "1 Pieza de Carne o Pollo a la Plancha, Facilista, Cebolla Caramelizada, Tocínea Crujiente, Cama de Papas Francesas y Huevo con Salsa Rosada con Papitas Fritas o Aros de Cebolla de Contorno",
+        "price": 8.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_31",
+        "categoryId": "cat_hamburguesas_especiales",
+        "name": "Pizza Burguer",
+        "description": "1 Pieza de Carne o Pollo a la Plancha, Lechuga, Queso Mozzarella, Pepperoni, Salsa Nápoles con Papitas Fritas o Aros de Cebolla de Contorno",
+        "price": 7,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_32",
+        "categoryId": "cat_hamburguesas_especiales",
+        "name": "Ciudad Jardín",
+        "description": "1 Pieza de Carne o Pollo a la Plancha, Tomate Asado, Queso Mozzarella, Ensalada Coleslaw y Salsa de Cilantro con Papitas Fritas o Aros de Cebolla de Contorno",
+        "price": 7,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_33",
+        "categoryId": "cat_hamburguesas_especiales",
+        "name": "Big Burguer",
+        "description": "1 Pieza de Carne, 1 Pieza de Pollo Crispy, 1 Pieza de Chuleta Ahumada, 1 Chorizo en Mariposa, Lechuga, Tomate, Facilista, Huevo a Tú Gusto, Tocínea, Mayonesa, Ketchup con Papitas Americanas o Aros de Cebolla de Contorno",
+        "price": 12.6,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_34",
+        "categoryId": "cat_hamburguesas_especiales",
+        "name": "Dori Burguer",
+        "description": "1 Pieza de Pollo Crispy de Doritos de Queso con Lechuga y Tomate, Mayonesa y Ketchup con Papas Fritas o Aros de Cebolla de Contorno",
+        "price": 7.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_35",
+        "categoryId": "cat_hamburguesas_especiales",
+        "name": "La Pelúa",
+        "description": "1 Pieza de Carne, Lechuga, Tomate, Queso Amarillo Rallado, Ketchup, Mayonesa con Papas Fritas o Aros de Cebolla de Contorno",
+        "price": 8,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_36",
+        "categoryId": "cat_club_house",
+        "name": "De Carne o Pollo",
+        "description": "Carne o Pollo a la Plancha con Papas Fritas o Aros de Cebolla",
+        "price": 8,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_37",
+        "categoryId": "cat_club_house",
+        "name": "Mixto",
+        "description": "Carne y Pollo a la Plancha con Papas Fritas o Aros de Cebolla",
+        "price": 10,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_38",
+        "categoryId": "cat_club_house",
+        "name": "De Chorizo",
+        "description": "con Papas Fritas o Aros de Cebolla",
+        "price": 9,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_39",
+        "categoryId": "cat_club_house",
+        "name": "De Pollo Crispy",
+        "description": "con Papas Fritas o Aros de Cebolla",
+        "price": 10,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_40",
+        "categoryId": "cat_club_house",
+        "name": "Familiar Carne o Pollo",
+        "description": "con Tenders y Gaseosa de 1.5Lts acompañado de Papas Fritas o Aros de Cebolla",
+        "price": 25,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_41",
+        "categoryId": "cat_club_house",
+        "name": "Con Salchipapas (Opcional)",
+        "description": "Adicional opcional",
+        "price": 1.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_42",
+        "categoryId": "cat_extras",
+        "name": "Carne",
+        "description": "",
+        "price": 2,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_43",
+        "categoryId": "cat_extras",
+        "name": "Pollo a la Plancha",
+        "description": "",
+        "price": 2,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_44",
+        "categoryId": "cat_extras",
+        "name": "Pollo Crispy",
+        "description": "",
+        "price": 2.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_45",
+        "categoryId": "cat_extras",
+        "name": "Chuleta Ahumada",
+        "description": "",
+        "price": 2.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_46",
+        "categoryId": "cat_extras",
+        "name": "Chorizos",
+        "description": "",
+        "price": 2,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_47",
+        "categoryId": "cat_extras",
+        "name": "Salchipapas",
+        "description": "",
+        "price": 2.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_48",
+        "categoryId": "cat_extras",
+        "name": "Facilista",
+        "description": "",
+        "price": 1,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_49",
+        "categoryId": "cat_extras",
+        "name": "Huevo",
+        "description": "",
+        "price": 1,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_50",
+        "categoryId": "cat_extras",
+        "name": "Pepinillos",
+        "description": "",
+        "price": 1,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_51",
+        "categoryId": "cat_extras",
+        "name": "Tocínea",
+        "description": "",
+        "price": 1.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_52",
+        "categoryId": "cat_extras",
+        "name": "Cebolla Caramelizada",
+        "description": "",
+        "price": 1,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_53",
+        "categoryId": "cat_extras",
+        "name": "Aros de Cebolla",
+        "description": "",
+        "price": 1,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_54",
+        "categoryId": "cat_extras",
+        "name": "Maíz",
+        "description": "",
+        "price": 1,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_55",
+        "categoryId": "cat_extras",
+        "name": "Ensalada Rallada",
+        "description": "",
+        "price": 1,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_56",
+        "categoryId": "cat_extras",
+        "name": "Pepperoni",
+        "description": "",
+        "price": 1.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_57",
+        "categoryId": "cat_extras",
+        "name": "Queso Mozzarella",
+        "description": "",
+        "price": 1.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_58",
+        "categoryId": "cat_extras",
+        "name": "Mayonesa",
+        "description": "",
+        "price": 0,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_59",
+        "categoryId": "cat_extras",
+        "name": "Ketchup",
+        "description": "",
+        "price": 0,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_60",
+        "categoryId": "cat_extras",
+        "name": "Salsa BBQ o BBQ Picante",
+        "description": "",
+        "price": 0,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_61",
+        "categoryId": "cat_extras",
+        "name": "Mostaza o Miel Mostaza",
+        "description": "",
+        "price": 0,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_62",
+        "categoryId": "cat_extras",
+        "name": "Salsa de Cilantro",
+        "description": "",
+        "price": 0,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_63",
+        "categoryId": "cat_extras",
+        "name": "Salsa de Tocínea",
+        "description": "",
+        "price": 0,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_64",
+        "categoryId": "cat_extras",
+        "name": "Salsa de Queso",
+        "description": "",
+        "price": 0,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_65",
+        "categoryId": "cat_extras",
+        "name": "Salsa Tártara",
+        "description": "",
+        "price": 0,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_66",
+        "categoryId": "cat_bebidas",
+        "name": "Café Guayoyo de la Casa",
+        "description": "",
+        "price": 1.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_67",
+        "categoryId": "cat_bebidas",
+        "name": "Café con Leche de la Casa",
+        "description": "",
+        "price": 2.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_68",
+        "categoryId": "cat_bebidas",
+        "name": "Agua Mineral 350ml",
+        "description": "",
+        "price": 1.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_69",
+        "categoryId": "cat_bebidas",
+        "name": "Agua Mineral 600ml",
+        "description": "",
+        "price": 2,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_70",
+        "categoryId": "cat_bebidas",
+        "name": "Agua Sparkling",
+        "description": "",
+        "price": 2,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_71",
+        "categoryId": "cat_bebidas",
+        "name": "Té de Jamaica",
+        "description": "",
+        "price": 2.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_72",
+        "categoryId": "cat_bebidas",
+        "name": "Té de Jamaica con Yerbabuena",
+        "description": "",
+        "price": 3.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_73",
+        "categoryId": "cat_bebidas",
+        "name": "Té de Jamaica con Coco",
+        "description": "",
+        "price": 4,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_74",
+        "categoryId": "cat_bebidas",
+        "name": "Limonada",
+        "description": "",
+        "price": 3,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_75",
+        "categoryId": "cat_bebidas",
+        "name": "Limonada con Yerbabuena",
+        "description": "",
+        "price": 3.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_76",
+        "categoryId": "cat_bebidas",
+        "name": "Limonada con Coco",
+        "description": "",
+        "price": 4,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_77",
+        "categoryId": "cat_bebidas",
+        "name": "Jugo de Piña",
+        "description": "",
+        "price": 3,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_78",
+        "categoryId": "cat_bebidas",
+        "name": "Jugo de Piña con Yerbabuena",
+        "description": "",
+        "price": 3.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_79",
+        "categoryId": "cat_bebidas",
+        "name": "Jugo de Piña con Coco",
+        "description": "",
+        "price": 4,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_80",
+        "categoryId": "cat_bebidas",
+        "name": "Jugo de Parchita",
+        "description": "",
+        "price": 3,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_81",
+        "categoryId": "cat_bebidas",
+        "name": "Jugo de Parchita con Yerbabuena",
+        "description": "",
+        "price": 3.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_82",
+        "categoryId": "cat_bebidas",
+        "name": "Jugo de Parchita con Coco",
+        "description": "",
+        "price": 4,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_83",
+        "categoryId": "cat_bebidas",
+        "name": "Jugo de Fresa",
+        "description": "",
+        "price": 3,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_84",
+        "categoryId": "cat_bebidas",
+        "name": "Jugo de Fresa con Yerbabuena",
+        "description": "",
+        "price": 3.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_85",
+        "categoryId": "cat_bebidas",
+        "name": "Jugo de Fresa con Coco",
+        "description": "",
+        "price": 4,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_86",
+        "categoryId": "cat_bebidas",
+        "name": "Nestea Limón o Durazno",
+        "description": "",
+        "price": 2.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_87",
+        "categoryId": "cat_bebidas",
+        "name": "Lipton Limón o Durazno",
+        "description": "",
+        "price": 3.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_88",
+        "categoryId": "cat_bebidas",
+        "name": "Refrescos en Vaso",
+        "description": "",
+        "price": 2,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_89",
+        "categoryId": "cat_bebidas",
+        "name": "Refrescos en Lata",
+        "description": "",
+        "price": 2.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_90",
+        "categoryId": "cat_bebidas",
+        "name": "Soda en Lata",
+        "description": "",
+        "price": 2.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_91",
+        "categoryId": "cat_bebidas",
+        "name": "Aguaquina en Lata",
+        "description": "",
+        "price": 2.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_92",
+        "categoryId": "cat_bebidas",
+        "name": "Gatorade",
+        "description": "",
+        "price": 3.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_93",
+        "categoryId": "cat_bebidas",
+        "name": "Bebida Energética",
+        "description": "",
+        "price": 4,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_94",
+        "categoryId": "cat_bebidas",
+        "name": "Vaso con Hielo",
+        "description": "",
+        "price": 0.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_95",
+        "categoryId": "cat_postres",
+        "name": "Fresas con Crema",
+        "description": "",
+        "price": 3.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_96",
+        "categoryId": "cat_postres",
+        "name": "Brownie con Crema",
+        "description": "",
+        "price": 3.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_97",
+        "categoryId": "cat_postres",
+        "name": "Fresas con Helado",
+        "description": "",
+        "price": 4,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      },
+      {
+        "id": "prod_98",
+        "categoryId": "cat_postres",
+        "name": "Brownie con Helado",
+        "description": "",
+        "price": 4.5,
+        "currencyCode": "USD",
+        "isAvailable": true,
+        "image": null
+      }
+    ]
+  },
+  "siteType": "restaurant",
+  "businessId": "8c5599ed-7ddc-49ae-9938-f80b01e98c49",
+  "clientSecret": "_ifYunNfGMQ-2J9cGsa76BI4pDDpH_030-3fIkGPpfw"
+}
