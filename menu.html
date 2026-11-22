@@ -36,6 +36,7 @@
     .logo-placeholder { color: var(--primary); font-size: 4.2rem; }
     .brand-panel h1 { margin: 24px 0 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 3.2vw, 2.8rem); font-weight: 500; letter-spacing: -.04em; line-height: 1.05; overflow-wrap: anywhere; }
     .brand-slogan { margin: 12px 0 0; color: rgb(255 255 255 / 78%); font-size: .94rem; line-height: 1.6; }
+    .currency-note { display: inline-flex; width: fit-content; margin: 10px 0 0; padding: 7px 10px; border: 1px solid rgb(255 255 255 / 20%); border-radius: 999px; background: rgb(255 255 255 / 9%); color: rgb(255 255 255 / 88%); font-size: .68rem; font-weight: 700; }
     .brand-rule { width: 54px; height: 3px; margin: 24px 0; border-radius: 9px; background: var(--accent); }
     .brand-actions { width: 100%; display: grid; gap: 10px; margin-top: auto; padding-top: 30px; }
     .brand-button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 16px; border: 1px solid rgb(255 255 255 / 27%); border-radius: 13px; background: rgb(255 255 255 / 9%); color: #fff; font-size: .85rem; font-weight: 750; text-align: center; text-decoration: none; cursor: pointer; transition: background .18s ease, transform .18s ease; }
@@ -76,7 +77,10 @@
     .item-state { display: inline-flex; margin-top: 8px; padding: 4px 8px; border-radius: 999px; background: #e8f1eb; color: #315c46; font-size: .64rem; font-weight: 800; }
     .item-state.unavailable { background: #f5e9e5; color: #994b39; }
     .item-side { min-width: 100px; display: grid; justify-items: end; gap: 8px; }
-    .item-price { color: var(--primary); font-size: .94rem; font-weight: 850; white-space: nowrap; }
+    .item-price { display: grid; justify-items: end; gap: 3px; color: var(--primary); font-size: .94rem; font-weight: 850; text-align: right; }
+    .price-main { white-space: nowrap; }
+    .price-reference { color: var(--muted); font-size: .68rem; font-weight: 700; white-space: nowrap; }
+    .cart-item-price { display: grid; gap: 3px; margin-top: 3px; font-size: .88rem; font-weight: 750; }
     .item-order { padding: 7px 11px; border: 1px solid var(--primary); border-radius: 999px; background: transparent; color: var(--primary); font-size: .72rem; font-weight: 800; text-decoration: none; white-space: nowrap; }
     .item-order:hover { background: var(--primary); color: #fff; }
     .item-order.disabled { border-color: var(--line); color: #999; pointer-events: none; }
@@ -100,7 +104,8 @@
     .close-button { width: 38px; height: 38px; flex: 0 0 38px; border: 1px solid var(--line); border-radius: 50%; background: #fff; color: var(--ink); font-size: 1.3rem; cursor: pointer; }
     .detail-image { width: 100%; max-height: 330px; margin-bottom: 16px; border-radius: 16px; object-fit: cover; background: color-mix(in srgb, var(--primary) 8%, white); }
     .detail-description { color: var(--muted); line-height: 1.65; white-space: pre-line; overflow-wrap: anywhere; }
-    .detail-price { color: var(--primary); font-size: 1.3rem; font-weight: 850; }
+    .detail-price { display: grid; gap: 4px; color: var(--primary); font-size: 1.3rem; font-weight: 850; }
+    .detail-price .price-reference { font-size: .78rem; }
     .cart-items { display: grid; gap: 10px; padding: 0; list-style: none; }
     .cart-item { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
     .cart-controls { display: flex; align-items: center; gap: 7px; }
@@ -160,6 +165,7 @@
       </div>
       <h1 id="restaurant-name">Nuestro restaurante</h1>
       <p class="brand-slogan" id="restaurant-slogan">Una experiencia para disfrutar.</p>
+      <p class="currency-note" id="currency-note" hidden></p>
       <span class="brand-rule" aria-hidden="true"></span>
       <div class="brand-actions">
         <a class="brand-button order-link" id="restaurant-whatsapp" href="#" target="_blank" rel="noopener noreferrer" hidden>
@@ -284,6 +290,39 @@
       }
     }
 
+    function currencyReference(amount, currency) {
+      if (menuData?.showCurrencyReference !== true) return null;
+      const rate = Number(menuData.vesPerUsd);
+      const value = Number(amount);
+      if (!Number.isFinite(rate) || rate <= 0 || !Number.isFinite(value)) return null;
+      switch (String(currency || 'USD').toUpperCase()) {
+        case 'USD':
+          return { amount: value * rate, currency: 'VES' };
+        case 'VES':
+          return { amount: value / rate, currency: 'USD' };
+        default:
+          return null;
+      }
+    }
+
+    function formatPriceText(amount, currency) {
+      const primary = formatPrice(amount, currency);
+      const reference = currencyReference(amount, currency);
+      return reference
+        ? `${primary} (Ref.: ${formatPrice(reference.amount, reference.currency)})`
+        : primary;
+    }
+
+    function priceMarkup(amount, currency) {
+      const primary = escapeHtml(formatPrice(amount, currency));
+      const reference = currencyReference(amount, currency);
+      return `<span class="price-main">${primary}</span>${
+        reference
+          ? `<span class="price-reference">Ref. ${escapeHtml(formatPrice(reference.amount, reference.currency))}</span>`
+          : ''
+      }`;
+    }
+
     function showToast(message) {
       const toast = document.getElementById('share-toast');
       toast.textContent = message;
@@ -296,7 +335,7 @@
       const phone = menuData.whatsapp;
       if (!/^\d{8,15}$/.test(phone)) return null;
       const baseMessage = menuData.whatsappMessage?.trim() || 'Hola, quisiera hacer un pedido.';
-      const message = `${baseMessage}\n\n${product.name} — ${formatPrice(product.price, product.currencyCode)}`;
+      const message = `${baseMessage}\n\n${product.name} — ${formatPriceText(product.price, product.currencyCode)}`;
       return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     }
 
@@ -312,7 +351,7 @@
         const currency = product.currencyCode || 'USD';
         totals.set(currency, (totals.get(currency) || 0) + product.price * quantity);
       }
-      return [...totals].map(([currency, total]) => formatPrice(total, currency)).join(' · ');
+      return [...totals].map(([currency, total]) => formatPriceText(total, currency)).join(' · ');
     }
 
     function renderCart() {
@@ -325,7 +364,7 @@
         return `<li class="cart-item">
           <div>
             <strong>${escapeHtml(product.name)}</strong>
-            <div>${formatPrice(product.price * quantity, product.currencyCode)}</div>
+            <div class="cart-item-price">${priceMarkup(product.price * quantity, product.currencyCode)}</div>
           </div>
           <div class="cart-controls">
             <button class="quantity-button" type="button" data-cart-id="${escapeHtml(id)}" data-cart-change="-1" aria-label="Quitar una unidad">−</button>
@@ -359,7 +398,7 @@
         if (navigator.share) {
           await navigator.share({
             title: product.name,
-            text: `${product.name} — ${formatPrice(product.price, product.currencyCode)}`,
+            text: `${product.name} — ${formatPriceText(product.price, product.currencyCode)}`,
             url,
           });
         } else if (navigator.clipboard?.writeText) {
@@ -378,8 +417,8 @@
       document.getElementById('detail-name').textContent = product.name;
       document.getElementById('detail-description').textContent =
         product.description?.trim() || 'Consulta con el restaurante para más detalles.';
-      document.getElementById('detail-price').textContent =
-        formatPrice(product.price, product.currencyCode);
+      document.getElementById('detail-price').innerHTML =
+        priceMarkup(product.price, product.currencyCode);
       const status = document.getElementById('detail-state');
       status.textContent = product.isAvailable ? 'Disponible' : 'No disponible por ahora';
       status.className = `item-state ${product.isAvailable ? '' : 'unavailable'}`;
@@ -406,7 +445,7 @@
         ...[...cart].map(([id, quantity]) => {
           const product = menuData.menu.products.find((item) => item.id === id);
           return product
-            ? `${quantity} x ${product.name} — ${formatPrice(product.price * quantity, product.currencyCode)}`
+            ? `${quantity} x ${product.name} — ${formatPriceText(product.price * quantity, product.currencyCode)}`
             : '';
         }).filter(Boolean),
         '',
@@ -471,7 +510,7 @@
                     </span>
                   </div>
                   <div class="item-side">
-                    <span class="item-price">${formatPrice(product.price, product.currencyCode)}</span>
+                    <span class="item-price">${priceMarkup(product.price, product.currencyCode)}</span>
                     <div class="item-actions">
                       ${order && product.isAvailable
                         ? `<a class="item-action whatsapp" href="${escapeHtml(order)}" target="_blank" rel="noopener noreferrer" aria-label="Pedir ${escapeHtml(product.name)} por WhatsApp">WhatsApp</a>`
@@ -528,6 +567,18 @@
       }
       if (colors && /^#[0-9a-f]{6}$/i.test(colors.accent || '')) {
         document.documentElement.style.setProperty('--accent', colors.accent);
+      }
+      const currencyNote = document.getElementById('currency-note');
+      const vesPerUsd = Number(menuData.vesPerUsd);
+      if (menuData.showCurrencyReference === true &&
+          Number.isFinite(vesPerUsd) &&
+          vesPerUsd > 0) {
+        const source = menuData.exchangeRateSource
+          ? ` · ${menuData.exchangeRateSource}`
+          : '';
+        currencyNote.textContent =
+          `Referencia informativa · 1 USD = ${formatPrice(vesPerUsd, 'VES')}${source}`;
+        currencyNote.hidden = false;
       }
       const logo = safeImageSource(menuData.logo);
       if (logo) {
