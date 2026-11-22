@@ -8,9 +8,9 @@
     "primary": "#245b63",
     "accent": "#e4b95f"
   },
-  "showCurrencyReference": false,
-  "exchangeRateSource": null,
-  "vesPerUsd": null,
+  "showCurrencyReference": true,
+  "exchangeRateSource": "BCV",
+  "vesPerUsd": 914.0218,
   "whatsapp": "5804247353064",
   "whatsappMessage": "Que quiere comer? Mierda?",
   "menu": {
